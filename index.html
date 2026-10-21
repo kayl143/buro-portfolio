@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Wilfred Buro | Digital Portfolio & BSIT Developer</title>
+  <meta name="description" content="Digital Portfolio of Jay Wilfred Buro - BSIT Student at Torres Capitol College. Web developer, UI/UX designer, and tech creator.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="light">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <!-- Logo -->
+      <a href="#home" class="nav-brand">
+        <span class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2.5" />
+            <circle cx="12" cy="12" r="4.5" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="brand-text">buro<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">home</a>
+        <a href="#about" class="nav-link">about</a>
+        <a href="#expertise" class="nav-link">expertise</a>
+        <a href="#projects" class="nav-link">portfolio</a>
+        <a href="#certificates" class="nav-link">certificates</a>
+      </div>
+
+      <!-- Action Area -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme" title="Toggle appearance">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Contact CTA -->
+        <a href="#contact" class="btn btn-pill-primary nav-contact-btn">contact</a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About Me</a>
+      <a href="#expertise" class="mobile-link">My Expertise</a>
+      <a href="#projects" class="mobile-link">Portfolio</a>
+      <a href="#certificates" class="mobile-link">Certificates</a>
+      <a href="#contact" class="btn btn-pill-primary w-full">Contact Me</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="purple-line-accent"></div>
+          
+          <h1 class="hero-title">
+            im <span class="name-text">jay wilfred</span>,<br>
+            a <span class="highlight-text" id="typewriter">digital developer</span>
+          </h1>
+
+          <p class="hero-description">
+            BSIT student at <strong>Torres Capitol College</strong>. Dedicated to building modern web interfaces, intelligent applications, and scalable digital solutions with an eye for clean aesthetics and seamless user experiences.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-pill-primary">contact me</a>
+            <a href="#projects" class="btn btn-pill-secondary">browse portfolio</a>
+          </div>
+
+          <!-- Quick status badge -->
+          <div class="hero-status-pill">
+            <span class="status-indicator"></span>
+            <span>BSIT • Torres Capitol College • Available for projects & internships</span>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual (Layered Purple Rings & Avatar Frame) -->
+        <div class="hero-visual">
+          <div class="avatar-ring-wrapper">
+            <!-- Subtle Outer Ambient Glow -->
+            <div class="ambient-glow"></div>
+            
+            <!-- Concentric Outer Accent Ring -->
+            <div class="ring ring-outer"></div>
+
+            <!-- Concentric Vivid Purple Ring -->
+            <div class="ring ring-purple"></div>
+
+            <!-- Main Inner Circle Container with Photo -->
+            <div class="avatar-circle" id="avatar-container" title="Jay Wilfred Buro">
+              <img id="user-avatar" src="assets/profile.jpg" alt="Jay Wilfred Buro - Profile Photo" class="avatar-image">
+              
+              <!-- Subtle overlay for photo replacement -->
+              <div class="avatar-hover-overlay">
+                <i class="fa-solid fa-camera"></i>
+                <span>Change Photo</span>
+              </div>
+
+              <!-- Hidden input for instant photo preview -->
+              <input type="file" id="photo-upload-input" accept="image/*" style="display: none;">
+            </div>
+
+            <!-- Floating Badge: Student & Tech -->
+            <div class="floating-tech-badge">
+              <div class="badge-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="badge-info">
+                <span class="badge-title">BSIT Major</span>
+                <span class="badge-sub">Torres Capitol College</span>
+              </div>
+            </div>
+
+            <!-- Floating Floating Accent Tag -->
+            <div class="floating-exp-badge">
+              <span class="pulse-dot"></span>
+              <span>Open to Opportunities</span>
+            </div>
+          </div>
+
+          <!-- Optional photo update button -->
+          <div class="avatar-upload-hint">
+            <button id="trigger-upload-btn" class="hint-btn">
+              <i class="fa-solid fa-camera"></i> Change / update photo
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MY EXPERTISE SECTION ================= -->
+    <section id="expertise" class="expertise-section">
+      <div class="container">
+        
+        <!-- Section Header with Arrows -->
+        <div class="section-header-row">
+          <div>
+            <div class="purple-line-accent"></div>
+            <h2 class="section-title">my expertise</h2>
+            <p class="section-subtitle">
+              Core competencies developed through rigorous academic projects at Torres Capitol College and hands-on software development.
+            </p>
+          </div>
+          
+          <!-- Slider Navigation Arrows (Matching design in screenshot) -->
+          <div class="slider-arrows">
+            <button id="expertise-prev" class="arrow-btn" aria-label="Previous slide">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="expertise-next" class="arrow-btn active" aria-label="Next slide">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Expertise Cards Track / Grid -->
+        <div class="expertise-track-wrapper">
+          <div class="expertise-grid" id="expertise-track">
+            
+            <!-- Card 1 -->
+            <div class="expertise-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="card-title">Web & Frontend Development</h3>
+              <p class="card-desc">
+                Crafting clean, responsive, and cross-browser web interfaces utilizing modern HTML5, CSS3, JavaScript, and responsive layouts that perform seamlessly on any screen.
+              </p>
+              <div class="card-tags">
+                <span>HTML5 / CSS3</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                <span>DOM API</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="expertise-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="card-title">Database & Backend Fundamentals</h3>
+              <p class="card-desc">
+                Designing normalized relational database schemas, handling CRUD operations, building server-side logic, and connecting applications with structured SQL databases.
+              </p>
+              <div class="card-tags">
+                <span>MySQL</span>
+                <span>PHP</span>
+                <span>Data Modeling</span>
+                <span>SQL Queries</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="expertise-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-pen-nib"></i>
+              </div>
+              <h3 class="card-title">UI / UX & Interface Design</h3>
+              <p class="card-desc">
+                Translating software requirements into intuitive, aesthetically pleasing user experiences with consistent typography, micro-interactions, and design systems.
+              </p>
+              <div class="card-tags">
+                <span>Figma</span>
+                <span>Wireframing</span>
+                <span>User Flows</span>
+                <span>Design Systems</span>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="expertise-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <h3 class="card-title">IT Infrastructure & Systems</h3>
+              <p class="card-desc">
+                System administration basics, operating systems configuration, computer networking principles (TCP/IP, subnetting), hardware troubleshooting, and IT support.
+              </p>
+              <div class="card-tags">
+                <span>Networking</span>
+                <span>OS Config</span>
+                <span>System Security</span>
+                <span>Tech Support</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT & EDUCATION SECTION ================= -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Left Column: Biography & Philosophy -->
+          <div class="about-text-col">
+            <div class="purple-line-accent"></div>
+            <h2 class="section-title">about me</h2>
+            <p class="lead-text">
+              Hello! I'm <strong>Jay Wilfred Buro</strong>, an aspiring IT professional and software creator currently pursuing a <strong>Bachelor of Science in Information Technology (BSIT)</strong> at <strong>Torres Capitol College</strong>.
+            </p>
+            <p class="body-text">
+              My journey into technology is driven by curiosity and the thrill of turning creative ideas into functional digital applications. Whether I'm architecting a database schema, building interactive user interfaces, or diagnosing network and system challenges, I approach each task with dedication, precision, and an eager appetite to master emerging technologies.
+            </p>
+
+            <div class="about-highlights-grid">
+              <div class="highlight-item">
+                <div class="h-number">BSIT</div>
+                <div class="h-label">Degree Focus</div>
+              </div>
+              <div class="highlight-item">
+                <div class="h-number">100%</div>
+                <div class="h-label">Commitment</div>
+              </div>
+              <div class="highlight-item">
+                <div class="h-number">Modern</div>
+                <div class="h-label">UI/UX Mindset</div>
+              </div>
+            </div>
+
+            <div class="about-cta-row">
+              <a href="#contact" class="btn btn-pill-primary">Get In Touch</a>
+              <button id="copy-email-btn" class="btn btn-pill-secondary">
+                <i class="fa-regular fa-copy"></i> Copy Email
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Certificates & Academic Credentials -->
+          <div class="education-col" id="certificates">
+            <!-- Anchor alias for backward compatibility with #education links -->
+            <span id="education" style="display:block; position:relative; top:-90px; visibility:hidden;"></span>
+
+            <div class="edu-card">
+              <div class="edu-badge"><i class="fa-solid fa-award"></i> VERIFIED CREDENTIALS</div>
+              <div class="edu-header">
+                <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div>
+                  <h3 class="edu-school">Torres Capitol College</h3>
+                  <span class="edu-degree">Bachelor of Science in Information Technology (BSIT)</span>
+                </div>
+              </div>
+              
+              <div class="edu-body">
+                <p class="edu-summary">
+                  Official certifications and workshop achievements earned by <strong>Jay Wilfred Buro</strong> during my academic and technical training.
+                </p>
+
+                <!-- Certificates List -->
+                <div class="certs-container">
+                  <!-- Certificate 1: Cisco Networking Academy -->
+                  <div class="cert-item-card">
+                    <div class="cert-item-thumb view-cert-trigger" 
+                         data-cert-img="assets/certificates/cisco-packet-tracer.png"
+                         data-cert-title="Getting Started with Cisco Packet Tracer"
+                         data-cert-meta="Awarded to Jay Wilfred Buro &bull; Cisco Networking Academy &bull; 08 Oct 2026"
+                         data-cert-id="65ad9083-0dce-43d5-8275-2e0417fff932">
+                      <img src="assets/certificates/cisco-packet-tracer.png" alt="Cisco Packet Tracer Certificate - Jay Wilfred Buro" loading="lazy">
+                      <div class="cert-item-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i> View Full Certificate
+                      </div>
+                    </div>
+                    <div class="cert-item-body">
+                      <div class="cert-item-meta">
+                        <span class="cert-item-badge cisco"><i class="fa-solid fa-network-wired"></i> Cisco Academy</span>
+                        <span class="cert-item-date"><i class="fa-regular fa-calendar"></i> 08 Oct 2026</span>
+                      </div>
+                      <h4 class="cert-item-title">Getting Started with Cisco Packet Tracer</h4>
+                      <p class="cert-item-sub">Awarded to <strong>Jay Wilfred Buro</strong> for successfully completing packet tracer fundamentals, network simulation, and topology modeling through Cisco Networking Academy.</p>
+                      <div class="cert-item-actions">
+                        <button type="button" class="cert-item-btn view-cert-trigger"
+                                data-cert-img="assets/certificates/cisco-packet-tracer.png"
+                                data-cert-title="Getting Started with Cisco Packet Tracer"
+                                data-cert-meta="Awarded to Jay Wilfred Buro &bull; Cisco Networking Academy &bull; 08 Oct 2026"
+                                data-cert-id="65ad9083-0dce-43d5-8275-2e0417fff932">
+                          <i class="fa-solid fa-expand"></i> View Certificate
+                        </button>
+                        <a href="assets/certificates/cisco-packet-tracer.png" target="_blank" class="cert-item-link-icon" title="Open certificate image in new tab" download="Jay_Wilfred_Buro_Cisco_Packet_Tracer.png">
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Certificate 2: DEVCON Bits of Light Roadshow -->
+                  <div class="cert-item-card">
+                    <div class="cert-item-thumb view-cert-trigger" 
+                         data-cert-img="assets/certificates/devcon-bits-of-light.jpg"
+                         data-cert-title="DEVCON Bits of Light Roadshow &mdash; Certificate of Participation"
+                         data-cert-meta="Presented to Jay Wilfred Buro &bull; DEVCON Bukidnon Chapter &bull; July 30, 2026"
+                         data-cert-id="Campus DEVCON @ TCC &bull; Stop 4">
+                      <img src="assets/certificates/devcon-bits-of-light.jpg" alt="DEVCON Bits of Light Roadshow Certificate - Jay Wilfred Buro" loading="lazy">
+                      <div class="cert-item-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i> View Full Certificate
+                      </div>
+                    </div>
+                    <div class="cert-item-body">
+                      <div class="cert-item-meta">
+                        <span class="cert-item-badge devcon"><i class="fa-solid fa-certificate"></i> DEVCON Roadshow</span>
+                        <span class="cert-item-date"><i class="fa-regular fa-calendar"></i> July 30, 2026</span>
+                      </div>
+                      <h4 class="cert-item-title">Certificate of Participation &mdash; Bits of Light</h4>
+                      <p class="cert-item-sub">Presented to <strong>Jay Wilfred Buro</strong> for active participation in the DEVCON Roadshow themed <em>"Spreading Light Through Technology and Compassion"</em> at Torres Capitol College, Maramag, Bukidnon.</p>
+                      <div class="cert-item-actions">
+                        <button type="button" class="cert-item-btn view-cert-trigger"
+                                data-cert-img="assets/certificates/devcon-bits-of-light.jpg"
+                                data-cert-title="DEVCON Bits of Light Roadshow &mdash; Certificate of Participation"
+                                data-cert-meta="Presented to Jay Wilfred Buro &bull; DEVCON Bukidnon Chapter &bull; July 30, 2026"
+                                data-cert-id="Campus DEVCON @ TCC &bull; Stop 4">
+                          <i class="fa-solid fa-expand"></i> View Certificate
+                        </button>
+                        <a href="assets/certificates/devcon-bits-of-light.jpg" target="_blank" class="cert-item-link-icon" title="Open certificate image in new tab" download="Jay_Wilfred_Buro_DEVCON_Bits_of_Light.jpg">
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="edu-footer">
+                <span class="edu-status-tag"><i class="fa-solid fa-user-graduate"></i> Active BSIT Student</span>
+                <span class="edu-location"><i class="fa-solid fa-location-dot"></i> Maramag, Bukidnon</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO / PROJECTS SECTION ================= -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        
+        <div class="purple-line-accent"></div>
+        <div class="portfolio-header-flex">
+          <div>
+            <h2 class="section-title">featured portfolio</h2>
+            <p class="section-subtitle">A curated collection of web applications, student projects, and interface experiments.</p>
+          </div>
+          
+          <!-- Category Filter Tabs -->
+          <div class="filter-tabs" id="project-filters">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="web">Web Dev</button>
+            <button class="filter-tab" data-filter="systems">Systems & DB</button>
+            <button class="filter-tab" data-filter="uiux">UI/UX Design</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card" data-category="systems">
+            <div class="project-thumb thumb-purple">
+              <div class="thumb-badge">Featured System</div>
+              <div class="thumb-mockup">
+                <i class="fa-solid fa-school-flag mockup-icon"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-category">Academic Project • Torres Capitol</span>
+              <h3 class="project-title">College Student Information & Grading Portal</h3>
+              <p class="project-desc">
+                A centralized portal concept for managing student profiles, course enrollment, and grade assessments with role-based access for students and instructors.
+              </p>
+              <div class="project-tech-stack">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>HTML5 / CSS</span>
+                <span>Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-action open-demo-btn" data-project="portal">
+                  Explore Project <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb thumb-indigo">
+              <div class="thumb-badge">Web Application</div>
+              <div class="thumb-mockup">
+                <i class="fa-solid fa-boxes-stacked mockup-icon"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-category">Full-Stack Solution</span>
+              <h3 class="project-title">Smart Campus Asset & Inventory Tracker</h3>
+              <p class="project-desc">
+                An intuitive tracking web tool designed for campus IT departments to monitor laboratory equipment, check out gear, and generate instant status reports.
+              </p>
+              <div class="project-tech-stack">
+                <span>JavaScript</span>
+                <span>CRUD Engine</span>
+                <span>Chart.js</span>
+                <span>CSS Grid</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-action open-demo-btn" data-project="inventory">
+                  Explore Project <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="uiux">
+            <div class="project-thumb thumb-violet">
+              <div class="thumb-badge">UI/UX Prototype</div>
+              <div class="thumb-mockup">
+                <i class="fa-solid fa-mobile-screen mockup-icon"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-category">Design System</span>
+              <h3 class="project-title">Torres Capitol Community Hub App</h3>
+              <p class="project-desc">
+                Modern mobile-first interface prototype fostering campus event discovery, club announcements, and peer collaboration with elegant micro-interactions.
+              </p>
+              <div class="project-tech-stack">
+                <span>Figma</span>
+                <span>UI Prototyping</span>
+                <span>Wireframing</span>
+                <span>Design Tokens</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-action open-demo-btn" data-project="community">
+                  Explore Project <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb thumb-accent">
+              <div class="thumb-badge">Personal Project</div>
+              <div class="thumb-mockup">
+                <i class="fa-solid fa-briefcase mockup-icon"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-category">Modern Portfolio</span>
+              <h3 class="project-title">Jay Wilfred Buro — Digital Brandfolio</h3>
+              <p class="project-desc">
+                A custom Webflow-inspired portfolio with concentric purple avatar frames, responsive grid mechanics, dynamic light/dark theming, and smooth interactive elements.
+              </p>
+              <div class="project-tech-stack">
+                <span>Vanilla JS</span>
+                <span>Custom CSS3</span>
+                <span>Semantic HTML</span>
+                <span>SVG Art</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-action open-demo-btn" data-project="portfolio">
+                  Explore Project <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SKILLS MATRIX SECTION ================= -->
+    <section class="skills-matrix-section">
+      <div class="container">
+        <div class="skills-container-box">
+          <div class="skills-header-center">
+            <div class="purple-line-accent center"></div>
+            <h2 class="section-title">technical toolkit</h2>
+            <p class="section-subtitle">Technologies, software, and platforms I work with regularly</p>
+          </div>
+
+          <div class="tools-grid">
+            <div class="tool-item">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="tool-item">
+              <i class="fa-brands fa-css3-alt"></i>
+              <span>CSS3 / SCSS</span>
+            </div>
+            <div class="tool-item">
+              <i class="fa-brands fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="tool-item">
+              <i class="fa-brands fa-php"></i>
+              <span>PHP</span>
+            </div>
+            <div class="tool-item">
+              <i class="fa-solid fa-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tool-item">
+              <i class="fa-brands fa-git-alt"></i>
+              <span>Git & GitHub</span>
+            </div>
+            <div class="tool-item">
+              <i class="fa-brands fa-figma"></i>
+              <span>Figma</span>
+            </div>
+            <div class="tool-item">
+              <i class="fa-brands fa-linux"></i>
+              <span>Linux / OS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Info -->
+          <div class="contact-info-col">
+            <div class="purple-line-accent"></div>
+            <h2 class="section-title">let's connect & collaborate</h2>
+            <p class="section-subtitle">
+              Have a project, internship opportunity, or tech discussion in mind? Feel free to reach out anytime!
+            </p>
+
+            <div class="contact-methods">
+              <div class="c-method-item">
+                <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="c-label">Email Me</span>
+                  <a href="mailto:jaywilfredburo@gmail.com" class="c-value">jaywilfredburo@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="c-method-item">
+                <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="c-label">Location / College</span>
+                  <span class="c-value">Torres Capitol College, Philippines</span>
+                </div>
+              </div>
+
+              <div class="c-method-item">
+                <div class="c-icon"><i class="fa-solid fa-user-tag"></i></div>
+                <div>
+                  <span class="c-label">Major & Focus</span>
+                  <span class="c-value">BS in Information Technology (BSIT)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-row">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:jaywilfredburo@gmail.com" class="social-circle" aria-label="Email Me Directly">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-col">
+            <div class="form-wrapper-card">
+              <h3 class="form-title">Send a Message</h3>
+              <p class="form-sub">Drop a quick note and I'll get back to you promptly.</p>
+
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" name="name" placeholder="e.g. Maria Santos" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Your Email Address</label>
+                  <input type="email" id="contact-email" name="email" placeholder="e.g. maria@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">Subject</label>
+                  <input type="text" id="contact-subject" name="subject" placeholder="Project Inquiry / Opportunity" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" rows="4" placeholder="Hi Jay, I'd like to discuss..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-pill-primary w-full form-submit-btn">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-wrapper">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#home" class="nav-brand">
+          <span class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="12" cy="12" r="4.5" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-text">buro<span class="brand-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">Crafted with precision & passion by Jay Wilfred Buro • Torres Capitol College BSIT</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span>&copy; <span id="current-year">2026</span> Jay Wilfred Buro. All Rights Reserved.</span>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i> Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= TOAST NOTIFICATION ================= -->
+  <div id="toast" class="toast-popup">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span id="toast-message">Notification message here</span>
+  </div>
+
+  <!-- ================= INTERACTIVE PROJECT MODAL ================= -->
+  <div id="project-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <button id="close-modal" class="modal-close-btn">&times;</button>
+      <div id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CERTIFICATE DETAIL MODAL ================= -->
+  <div id="cert-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+    <div class="modal-card cert-modal-card">
+      <button id="close-cert-modal" class="modal-close-btn">&times;</button>
+      <div class="cert-modal-header">
+        <h3 id="cert-modal-title" style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main); line-height: 1.3;">Certificate Preview</h3>
+        <p id="cert-modal-meta" style="font-size: 0.85rem; color: var(--primary); font-weight: 600;">Verified Credential</p>
+      </div>
+      <div class="cert-modal-media">
+        <img id="cert-modal-img" src="" alt="Full Certificate View">
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.75rem;">
+        <span id="cert-modal-id" style="font-size: 0.8rem; color: var(--text-muted); font-family: monospace;"></span>
+        <a id="cert-modal-download" href="" download class="btn btn-pill-primary" style="padding: 0.55rem 1.25rem; font-size: 0.85rem;">
+          <i class="fa-solid fa-download"></i> Download Original
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
